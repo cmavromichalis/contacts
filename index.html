@@ -33,20 +33,20 @@
         </h4>
       </div>
       <div>
-        <label for="name">Name:</label>
+        <label form="name">Name:</label>
         <input type="text" name="name">
       </div>
       <div>
-        <label for="phone">Phone:</label>
+        <label form="phone">Phone:</label>
         <input type="text" name="phone">
       </div>
       <div>
-        <label for="emergency">Emergency Contact</label>
+        <label form="emergency">Emergency Contact</label>
         <input type="checkbox" name="emergencyContact">
       </div>
       <hr>
       <div class="d-flex space-between">
-        <button type="submit" onclick="addContact()">Submit</button>
+        <button type="submit" onclick="addContact(event)">Submit</button>
         <button class="btn-cancel" onclick="toggleAddContactForm()" type="button" >Cancel</button>
       </div>
     </form>
