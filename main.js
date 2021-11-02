@@ -51,7 +51,22 @@ function loadContacts() {
 function drawContacts() {
   let template = '';
 
-  contacts.forEach
+  contacts.forEach((contact) => {
+    template += `
+      <div class="card mt-1 mb-1">
+        <h3 class="mt-1 mb-1">${contact.name}</h3>
+        <div class="d-flex space-between">
+          <p>
+            <i class="fa fa-fw fa-phone"></i>
+            <span>${contact.phone}</span>
+          </p>
+          <i class="action fa fa-trash text-danger"></i>
+        </div>
+      </div>
+        `;
+  });
+
+  document.getElementById("players").innerHTML = template;
 }
 
 /**
