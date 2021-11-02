@@ -32,13 +32,10 @@ function drawContacts() {
   contacts.forEach((contact) => {
     template += `
       <div class="contact-card ${
-        contact.emergencyContact ? "emergency-contact" : ""
-      }">
+        contact.emergencyContact ? "emergency-contact" : ""}">
         <h3>${contact.name}</h3>
         <p>${contact.phone}</p>
-        <button type="button" onclick="removeContact('${
-          contact.id
-        }')">remove</button>      
+        <button type="button" onclick="removeContact('${contact.id}')">remove</button>      
       </div>
     `;
   });
