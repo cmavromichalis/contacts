@@ -38,7 +38,7 @@ function saveContacts() {
  */
 function loadContacts() {
   let contactsData = JSON.parse(window.localStorage.getItem("contacts"));
-  if contactsData {
+  if (contactsData) {
     contacts = contactsData;
   }
 }
@@ -49,7 +49,7 @@ function loadContacts() {
  * contacts in the contacts array
  */
 function drawContacts() {
-  let template = '';
+  let template = "";
 
   contacts.forEach((contact) => {
     template += `
@@ -66,7 +66,7 @@ function drawContacts() {
         `;
   });
 
-  document.getElementById("players").innerHTML = template;
+  document.getElementById("contact-list").innerHTML = template;
 }
 
 /**
