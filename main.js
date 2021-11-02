@@ -26,23 +26,33 @@ function addContact(event) {
 
 /**
  * Converts the contacts array to a JSON string then
- * Saves the string to localstorage at the key contacts
+ * Saves the string to local storage at the key contacts
  */
-function saveContacts() {}
-
+function saveContacts() {
+  window.localStorage.setItem("contacts", JSON.stringify(contacts));
+}
 /**
- * Attempts to retrieve the contacts string from localstorage
+ * Attempts to retrieve the contacts string from local storage
  * then parses the JSON string into an array. Finally sets
  * the contacts array to the retrieved array
  */
-function loadContacts() {}
+function loadContacts() {
+  let contactsData = JSON.parse(window.localStorage.getItem("contacts"));
+  if contactsData {
+    contacts = contactsData;
+  }
+}
 
 /**
  * This function targets the contacts-list on the
  * DOM and adds a new div element for each of the
  * contacts in the contacts array
  */
-function drawContacts() {}
+function drawContacts() {
+  let template = '';
+
+  contacts.forEach
+}
 
 /**
  * This function is called with a contact id
@@ -55,9 +65,6 @@ function drawContacts() {}
  */
 function removeContact(contactId) {}
 
-/**
- Getting Error stating that hidden is not defined.
- */
 function toggleAddContactForm() {
   document.getElementById("new-contact-form").classList.toggle("hidden");
 }
